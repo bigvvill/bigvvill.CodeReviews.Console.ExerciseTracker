@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "bigvvill.CodeReviews.Console.ExerciseTracker": {
+    "ExerciseTracker": {
       "commandName": "Project",
       "workingDirectory": "D:\\Users\\willi\\source\\repos\\bigvvill.CodeReviews.Console.ExerciseTracker"
     }

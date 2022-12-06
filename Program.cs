@@ -1,4 +1,4 @@
-﻿using bigvvill.CodeReviews.Console.ExerciseTracker;
+﻿using ExerciseTracker;
 
 UserInput userInput = new();
 userInput.MainMenu();

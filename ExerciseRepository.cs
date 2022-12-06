@@ -1,4 +1,4 @@
-﻿namespace bigvvill.CodeReviews.Console.ExerciseTracker
+﻿namespace ExerciseTracker
 {
     internal class ExerciseRepository
     {

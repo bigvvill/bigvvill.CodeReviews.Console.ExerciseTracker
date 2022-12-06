@@ -1,9 +1,11 @@
-﻿namespace bigvvill.CodeReviews.Console.ExerciseTracker;
+﻿using System;
 
-internal class UserInput
+namespace ExerciseTracker;
+
+public class UserInput
 {
-    internal void MainMenu()
+    public void MainMenu()
     {
-        System.Console.WriteLine("Welcome to Exercise Tracker!!!");
+        Console.WriteLine("Welcome to Exercise Tracker!!!");
     }
 }
