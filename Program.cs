@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using bigvvill.CodeReviews.Console.ExerciseTracker;
+
+UserInput userInput = new();
+userInput.MainMenu();
