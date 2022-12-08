@@ -18,6 +18,5 @@ namespace bigvvill.CodeReviews.Console.ExerciseTracker.Models
 
         [Required]
         public string Comments { get; set; }
-
     }
 }
