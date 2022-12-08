@@ -18,11 +18,27 @@ namespace ExerciseTracker
 
             context.Exercises.Add(exercise);
             context.SaveChanges();
+
+            Console.WriteLine("\nSession added. Press Enter...");
+            Console.ReadLine();
+            UserInput userInput = new();
+            userInput.MainMenu();
         }
 
         internal void GetSessions()
         {
-            Console.WriteLine("Bye");
+            ExerciseTrackerDbContext context = new ExerciseTrackerDbContext();
+
+            List<Exercise> exercises= new List<Exercise>();
+
+            foreach (var session in context.Exercises)
+            {                
+                exercises.Add(session);
+                
+            }
+
+            DisplayTable displayTable = new();
+            displayTable.DisplaySessions();
         }
     }
 }
