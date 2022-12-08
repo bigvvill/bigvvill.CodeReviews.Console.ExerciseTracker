@@ -1,4 +1,5 @@
 ﻿using bigvvill.CodeReviews.Console.ExerciseTracker.Models;
+using ExerciseTracker.Data;
 
 namespace ExerciseTracker
 {
@@ -6,7 +7,7 @@ namespace ExerciseTracker
     {
         internal void AddSession()
         {
-
+            ExerciseTrackerDbContext context = new ExerciseTrackerDbContext();
 
             Console.WriteLine("dropping into DB\nint Id *\nDateTime DateStart 2022-12-8 08:00:00\nDateTime DateEnd 2022-12-8 08:40:00\nTimeSpan Duration *\nstring Comments Eliptical");
 
@@ -15,10 +16,8 @@ namespace ExerciseTracker
             exercise.DateEnd = DateTime.Parse("2022-12-8 08:40:00");
             exercise.Comments = "Eliptical";
 
-            List<Exercise> exercises= new List<Exercise>();
-            exercises.Add(exercise);
-
-            
+            context.Exercises.Add(exercise);
+            context.SaveChanges();
         }
 
         internal void GetSessions()

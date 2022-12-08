@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using bigvvill.CodeReviews.Console.ExerciseTracker.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace ExerciseTracker.Data
 {
     internal class ExerciseTrackerDbContext : DbContext
     {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=ExerciseTrackerDb;Trusted_Connection=True;MultipleActiveResultSets=true");
+        }
 
+        public DbSet<Exercise> Exercises { get; set; }
     }
 }
