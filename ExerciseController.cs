@@ -7,7 +7,7 @@ namespace ExerciseTracker
     {
         internal void AddSession()
         {
-            ExerciseTrackerDbContext context = new ExerciseTrackerDbContext();
+            ExerciseTrackerDbContext context = new();
 
             Console.WriteLine("dropping into DB\nint Id *\nDateTime DateStart 2022-12-8 08:00:00\nDateTime DateEnd 2022-12-8 08:40:00\nTimeSpan Duration *\nstring Comments Eliptical");
 
@@ -27,7 +27,7 @@ namespace ExerciseTracker
 
         internal void GetSessions()
         {
-            ExerciseTrackerDbContext context = new ExerciseTrackerDbContext();
+            ExerciseTrackerDbContext context = new();
 
             List<Exercise> exercises= new List<Exercise>();
 
