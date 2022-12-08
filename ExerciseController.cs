@@ -33,8 +33,7 @@ namespace ExerciseTracker
 
             foreach (var session in context.Exercises)
             {                
-                exercises.Add(session);
-                
+                exercises.Add(session);                
             }
 
             DisplayTable displayTable = new();
