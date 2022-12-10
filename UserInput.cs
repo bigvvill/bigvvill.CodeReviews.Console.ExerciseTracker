@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bigvvill.CodeReviews.Console.ExerciseTracker.Models;
+using System;
 
 namespace ExerciseTracker;
 
@@ -36,9 +37,58 @@ public class UserInput
                 Console.ReadLine();
                 MainMenu();
                 break;
+        }        
+    }
+
+    internal Exercise GetExerciseInput()
+    {
+        Console.WriteLine("New Session");
+        Console.WriteLine("\nEnter start time of session (format: yyyy-mm-dd hh:mm:ss) or 0 to return to Menu:");
+        string startTimeInput = Console.ReadLine();
+
+        if (startTimeInput == "0")
+        {
+            MainMenu();
         }
 
+        while (startTimeInput == null || !Validation.IsValidDateTime(startTimeInput))
+        {
+            Console.WriteLine("Please enter a date and time in the format (yyyy-mm-dd hh:mm:ss) or 0 to return to Menu:");
+            startTimeInput= Console.ReadLine();
 
-        Console.WriteLine("\nEnter start time of session:");
+            if (startTimeInput == "0")
+            {
+                MainMenu();
+            }
+        }
+
+        Console.WriteLine("\nEnter end time of session (format: yyyy-mm-dd hh:mm:ss) or 0 to return to Menu:");
+        string endTimeInput = Console.ReadLine();
+
+        if (endTimeInput == "0")
+        {
+            MainMenu();
+        }
+
+        while (endTimeInput == null || !Validation.IsValidDateTime(endTimeInput))
+        {
+            Console.WriteLine("Please enter a date and time in the format (yyyy-mm-dd hh:mm:ss) or 0 to return to Menu:");
+            endTimeInput = Console.ReadLine();
+
+            if (endTimeInput == "0")
+            {
+                MainMenu();
+            }
+        }
+
+        Console.WriteLine("\nEnter comments or 0 to return to Menu:");
+        string comments = Console.ReadLine();
+
+        Exercise exercise = new Exercise();
+        exercise.DateStart = DateTime.Parse(startTimeInput);
+        exercise.DateEnd = DateTime.Parse(endTimeInput);
+        exercise.Comments = comments;
+
+        return exercise;
     }
 }
