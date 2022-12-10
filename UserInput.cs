@@ -31,6 +31,7 @@ public class UserInput
                 break;
             case "2":                
                 exerciseController.GetSessions();
+
                 break;
             default:
                 Console.WriteLine("\nPlease enter a valid selection: \"0\", \"1\", or \"2\"\nPress Enter...");
