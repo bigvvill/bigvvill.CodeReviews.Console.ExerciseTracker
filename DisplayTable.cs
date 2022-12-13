@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace ExerciseTracker
 {
-    internal class DisplayTable
+    public class DisplayTable
     {
-        internal static void ShowSessions<T>(List<T> tableData) where T : class
+        public static void ShowSessions<T>(List<T> tableData) where T : class
         {
             ConsoleTableBuilder
                 .From(tableData)

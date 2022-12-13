@@ -1,6 +1,6 @@
 ﻿namespace ExerciseTracker
 {
-    internal class ExerciseService
+    public class ExerciseService
     {
     }
 }

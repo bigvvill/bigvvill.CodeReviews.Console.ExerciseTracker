@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ExerciseTracker
 {
-    internal class Validation
+    public class Validation
     {
-        internal static bool IsValidDateTime(string dateTimeInput)
+        public static bool IsValidDateTime(string dateTimeInput)
         {
             if (String.IsNullOrEmpty(dateTimeInput) || !DateTime.TryParse(dateTimeInput, out _))
             {

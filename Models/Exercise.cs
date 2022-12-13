@@ -2,7 +2,7 @@
 
 namespace bigvvill.CodeReviews.Console.ExerciseTracker.Models
 {
-    internal class Exercise
+    public class Exercise
     {
         [Required]
         public int Id { get; set; }

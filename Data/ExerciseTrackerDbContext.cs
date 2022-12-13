@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ExerciseTracker.Data
 {
-    internal class ExerciseTrackerDbContext : DbContext
+    public class ExerciseTrackerDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

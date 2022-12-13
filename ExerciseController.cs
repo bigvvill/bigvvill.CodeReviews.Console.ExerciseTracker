@@ -3,9 +3,9 @@ using ExerciseTracker.Data;
 
 namespace ExerciseTracker
 {
-    internal class ExerciseController
+    public class ExerciseController
     {
-        internal void AddSession()
+        public void AddSession()
         {
             ExerciseTrackerDbContext context = new();
 
@@ -21,7 +21,7 @@ namespace ExerciseTracker
             userInput.MainMenu();
         }
 
-        internal void GetSessions()
+        public void GetSessions()
         {
             ExerciseTrackerDbContext context = new();
 
