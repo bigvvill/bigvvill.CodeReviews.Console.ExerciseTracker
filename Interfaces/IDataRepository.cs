@@ -9,8 +9,8 @@ namespace ExerciseTracker.Interfaces
 {
     public interface IDataRepository
     {
-        List<Exercise> AddExercise(ExerciseController exercise);
-        List<Exercise> GetExercise();
+        List<Exercise> AddExercise(Exercise exercise);
+        List<Exercise> GetExercises();
         Exercise PutExercise(Exercise exercise);
         Exercise GetExerciseById(int id);
     }

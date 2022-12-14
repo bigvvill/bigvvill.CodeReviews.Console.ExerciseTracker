@@ -13,24 +13,25 @@ namespace ExerciseTracker
             this.db = db;
         }
 
-        List<Exercise> IDataRepository.AddExercise(ExerciseController exercise)
+        public List<Exercise> AddExercise(Exercise exercise)
         {
-            throw new NotImplementedException();
+            db.Exercises.Add(exercise);
+            db.SaveChanges();
+            return db.Exercises.ToList();
         }
 
-        List<Exercise> IDataRepository.GetExercise()
+        public List<Exercise> GetExercises()=> db.Exercises.ToList();        
+
+        public Exercise GetExerciseById(int id)
         {
-            throw new NotImplementedException();
+            return db.Exercises.Where(x=>x.Id == id).FirstOrDefault();
         }
 
-        Exercise IDataRepository.GetExerciseById(int id)
+        public Exercise PutExercise(Exercise exercise)
         {
-            throw new NotImplementedException();
-        }
-
-        Exercise IDataRepository.PutExercise(Exercise exercise)
-        {
-            throw new NotImplementedException();
+            db.Exercises.Update(exercise);
+            db.SaveChanges();
+            return db.Exercises.Where(x => x.Id == exercise.Id).FirstOrDefault();
         }
     }
 }
